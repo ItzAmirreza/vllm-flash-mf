@@ -13,6 +13,8 @@ ARG CUDA_VERSION=12.4.1
 ARG PYTHON_VERSION=3.12
 ARG TARGETPLATFORM
 ENV DEBIAN_FRONTEND=noninteractive
+ENV TZ=America/Los_Angeles
+
 
 # Install Python and other dependencies
 RUN echo 'tzdata tzdata/Areas select America' | debconf-set-selections \
